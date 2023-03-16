@@ -10,6 +10,7 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "go",
   },
   indent = {
     enable = true,
@@ -28,8 +29,9 @@ M.mason = {
     -- web dev stuff
     "css-lsp",
     "html-lsp",
-    "typescript-language-server",
-    "deno",
+
+    -- go
+    "gopls",
   },
 }
 
@@ -45,6 +47,18 @@ M.nvimtree = {
       show = {
         git = true,
       },
+    },
+  },
+}
+
+M.telescope = {
+  pickers = {
+    buffers = {
+      ignore_current_buffer = true,
+      sort_lastused = true,
+    },
+    find_files = {
+      no_ignore = true,
     },
   },
 }
