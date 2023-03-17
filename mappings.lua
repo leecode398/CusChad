@@ -1,6 +1,11 @@
 ---@type MappingsTable
 local M = {}
 
+M.disabled = {
+  n = {
+    ["<leader>cc"] = "",
+  },
+}
 M.general = {
   n = {
     ["<leader>tb"] = { "<cmd> TagbarToggle <CR>", "toggle tagbar" },
