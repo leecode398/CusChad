@@ -1,5 +1,5 @@
 local opts = {
-  log_level = "info",
+  log_level = "debug",
   auto_session_enable_last_session = false,
   auto_session_root_dir = "/Users/lee/.cache/sessions/",
   auto_session_enabled = true,

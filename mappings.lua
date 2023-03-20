@@ -36,18 +36,6 @@ M.treesitter = {
   },
 }
 
-M.shade = {
-  n = {
-    ["<leader>s"] = {
-      function()
-        require("shade").toggle()
-      end,
-
-      "   toggle shade.nvim",
-    },
-  },
-}
-
 M.lspconfig = {
   -- See `<cmd> :help vim.lsp.*` for documentation on any of the below functions
 
@@ -92,6 +80,9 @@ M.telescope = {
     ["gd"] = { "<cmd> Telescope lsp_definitions <CR>", "lsp definitions" },
     ["gi"] = { "<cmd> Telescope lsp_implementations <CR>", "lsp implementations" },
     ["gt"] = { "<cmd>Telescope lsp_type_definitions <CR>", "lsp type_definition" },
+
+    -- session
+    ["<leader>s"] = { "<cmd>Telescope session-lens search_session <CR>", "session" },
   },
 }
 
