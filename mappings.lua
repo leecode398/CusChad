@@ -13,8 +13,10 @@ M.general = {
     ["f"] = { "<cmd> HopChar1CurrentLineAC <CR>", "find after" },
     ["F"] = { "<cmd> HopChar1CurrentLineBC <CR>", "find before" },
     ["za"] = { "<cmd> HopChar2 <CR>", "find anywhere" },
-    ["zz"] = { "<cmd> HopChar1 <CR>", "find anywhere" },
+    ["zs"] = { "<cmd> HopChar1 <CR>", "find anywhere" },
     ["gl"] = { "<cmd> LspRestart <CR>", "restart lsp" },
+    ["<leader>d"] = { "<cmd> Git diff <CR>", "git diff" },
+    ["<leader>tr"] = { "<cmd> TroubleToggle <CR>", "trouble" },
   },
   v = {
     ["f"] = { "<cmd> HopChar1CurrentLineAC <CR>", "find after" },

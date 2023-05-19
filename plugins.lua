@@ -116,7 +116,7 @@ local plugins = {
       })
     end,
     opts = function()
-      return require("custom.configs.overrides").gitsigns
+      return overrides.gitsigns
     end,
     config = function(_, opts)
       dofile(vim.g.base46_cache .. "git")
@@ -160,7 +160,6 @@ local plugins = {
     lazy = false,
     config = function()
       require("scratch").setup {
-        scratch_file_dir = "~/.cache/scratch",
         filetypes = { "json", "xml", "go", "lua", "log", "py", "sh" },
       }
     end,
@@ -181,7 +180,7 @@ local plugins = {
       require("luasnip.loaders.from_vscode").lazy_load()
     end,
   },
-  { "terryma/vim-multiple-cursors", lazy = false },
+  { "mg979/vim-visual-multi", branch = "master", lazy = false },
   {
     "folke/todo-comments.nvim",
     lazy = false,
@@ -189,20 +188,27 @@ local plugins = {
       require "custom.configs.todo-comments"
     end,
   },
+  -- {
+  --   "rmagatti/auto-session",
+  --   lazy = false,
+  --   config = function()
+  --     require "custom.configs.auto-session"
+  --   end,
+  -- },
+  -- {
+  --   "rmagatti/session-lens",
+  --   requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
+  --   lazy = false,
+  --   config = function()
+  --     require("session-lens").setup {[>your custom config--<]
+  --     }
+  --   end,
+  -- },
   {
-    "rmagatti/auto-session",
+    "Shatur/neovim-session-manager",
     lazy = false,
     config = function()
-      require "custom.configs.auto-session"
-    end,
-  },
-  {
-    "rmagatti/session-lens",
-    requires = { "rmagatti/auto-session", "nvim-telescope/telescope.nvim" },
-    lazy = false,
-    config = function()
-      require("session-lens").setup {--[[your custom config--]]
-      }
+      require "custom.configs.session-manager"
     end,
   },
   {
@@ -217,6 +223,19 @@ local plugins = {
   },
   { "preservim/tagbar", lazy = false },
   { "ddollar/nerdcommenter", lazy = false },
+  { "tpope/vim-fugitive", lazy = false },
+  {
+    "folke/trouble.nvim",
+    lazy = false,
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      }
+    end,
+  },
 }
 
 return plugins
