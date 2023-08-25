@@ -22,6 +22,14 @@ M.general = {
     ["f"] = { "<cmd> HopChar1CurrentLineAC <CR>", "find after" },
     ["F"] = { "<cmd> HopChar1CurrentLineBC <CR>", "find before" },
   },
+  i = {
+    ["<C-b>"] = { "<Left>", "move left" },
+    ["<C-f>"] = { "<Right>", "move right" },
+    ["<C-p>"] = { "<Up>", "move up" },
+    ["<C-n>"] = { "<Down>", "move down" },
+    ["<C-h>"] = { "<ESC>^i", "beginning of line" },
+    ["<C-l>"] = { "<End>", "end of line" },
+  },
 }
 
 M.truzen = {

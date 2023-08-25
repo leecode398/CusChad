@@ -11,7 +11,7 @@ require("nvim-treesitter.configs").setup {
     -- code block highlights that do not have ts grammar
     additional_vim_regex_highlighting = { "org" },
   },
-  ensure_installed = { "org" }, -- Or run :TSUpdate org
+  ensure_installed = {}, -- Or run :TSUpdate org
 }
 
 require("orgmode").setup {
